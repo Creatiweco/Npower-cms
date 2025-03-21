@@ -1,0 +1,75 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "AboutPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "WhoAreWe": {
+      "displayName": "WhoAreWe",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-page.who-are-we",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "WhatWeDo": {
+      "displayName": "WhatWeDo",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-page.what-we-do",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "VissionMissionArge": {
+      "displayName": "VissionMissionArge",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-page.vission-mission-arge",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "BrandTab": {
+      "displayName": "AboutBrand",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.about-brand",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Certificate": {
+      "displayName": "Certificate",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.certificate",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

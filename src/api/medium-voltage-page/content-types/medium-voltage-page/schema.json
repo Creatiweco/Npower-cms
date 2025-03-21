@@ -1,0 +1,90 @@
+{
+  "kind": "singleType",
+  "collectionName": "medium_voltage_pages",
+  "info": {
+    "singularName": "medium-voltage-page",
+    "pluralName": "medium-voltage-pages",
+    "displayName": "MediumVoltagePage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Content": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "MainImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "PanelItem": {
+      "displayName": "PanelItems",
+      "type": "component",
+      "repeatable": true,
+      "component": "panel-items.panel-items",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "MediumVoltageFeatures": {
+      "displayName": "MediumVoltageFeatures",
+      "type": "component",
+      "repeatable": true,
+      "component": "features-items.medium-voltage-features",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Brands": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

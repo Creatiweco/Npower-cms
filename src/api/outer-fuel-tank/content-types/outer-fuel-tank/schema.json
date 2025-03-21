@@ -1,0 +1,63 @@
+{
+  "kind": "singleType",
+  "collectionName": "outer_fuel_tanks",
+  "info": {
+    "singularName": "outer-fuel-tank",
+    "pluralName": "outer-fuel-tanks",
+    "displayName": "OuterFuelTank",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "OuterFuelTank": {
+      "displayName": "OuterFuelTank",
+      "type": "component",
+      "repeatable": true,
+      "component": "outer-fuel-tank.outer-fuel-tank",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Content": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

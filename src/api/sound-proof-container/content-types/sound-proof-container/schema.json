@@ -1,0 +1,74 @@
+{
+  "kind": "singleType",
+  "collectionName": "sound_proof_containers",
+  "info": {
+    "singularName": "sound-proof-container",
+    "pluralName": "sound-proof-containers",
+    "displayName": "SoundProofContainer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Content": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "MainImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "SoundProofGeneratorData": {
+      "displayName": "SoundProofGenerator",
+      "type": "component",
+      "repeatable": true,
+      "component": "sound-proof-generator.sound-proof-generator",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "SoundProofFeatures": {
+      "displayName": "SoundProofFeatures",
+      "type": "component",
+      "repeatable": false,
+      "component": "sound-proof-generator.sound-proof-features",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

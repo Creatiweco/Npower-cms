@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "catalog_pages",
+  "info": {
+    "singularName": "catalog-page",
+    "pluralName": "catalog-pages",
+    "displayName": "CatalogPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "CatalogItem": {
+      "displayName": "Catalog",
+      "type": "component",
+      "repeatable": true,
+      "component": "catalog.catalog",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
