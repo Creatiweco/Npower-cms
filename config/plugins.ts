@@ -1,16 +1,8 @@
 export default ({ env }) => ({
-    i18n: {
-      enabled: true,
+  i18n: {
+    config: {
+      locales: ['en', 'tr'],
+      defaultLocale: 'en',
     },
-    upload: {
-      config: {
-        provider: 'cloudinary',
-        providerOptions: {
-          cloud_name: env('CLOUDINARY_NAME'),
-          api_key: env('CLOUDINARY_KEY'),
-          api_secret: env('CLOUDINARY_SECRET'),
-        },
-      },
-    },
-  });
-  
+  },
+});
