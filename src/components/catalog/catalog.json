@@ -1,17 +1,26 @@
 {
   "collectionName": "components_catalog_catalogs",
   "info": {
-    "displayName": "Catalog"
+    "displayName": "Catalog",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Title": {
       "type": "string"
     },
-    "Link": {
-      "type": "string"
-    },
     "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Catalog": {
       "allowedTypes": [
         "images",
         "files",
@@ -19,7 +28,7 @@
         "audios"
       ],
       "type": "media",
-      "multiple": true
+      "multiple": false
     }
   }
 }
