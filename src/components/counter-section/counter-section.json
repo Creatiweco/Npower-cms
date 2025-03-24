@@ -1,7 +1,8 @@
 {
   "collectionName": "components_counter_section_counter_sections",
   "info": {
-    "displayName": "CounterSection"
+    "displayName": "CounterSection",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,14 +12,21 @@
     "Link1": {
       "type": "string"
     },
-    "Link2": {
-      "type": "string"
-    },
     "CounterItem": {
       "displayName": "CounterItem",
       "type": "component",
       "repeatable": true,
       "component": "counter-section.counter-item"
+    },
+    "Link2": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

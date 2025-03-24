@@ -148,6 +148,7 @@ export interface CounterSectionCounterItem extends Struct.ComponentSchema {
 export interface CounterSectionCounterSection extends Struct.ComponentSchema {
   collectionName: 'components_counter_section_counter_sections';
   info: {
+    description: '';
     displayName: 'CounterSection';
   };
   attributes: {
@@ -157,7 +158,7 @@ export interface CounterSectionCounterSection extends Struct.ComponentSchema {
     >;
     Description: Schema.Attribute.Blocks;
     Link1: Schema.Attribute.String;
-    Link2: Schema.Attribute.String;
+    Link2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
