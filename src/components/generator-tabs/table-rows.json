@@ -18,9 +18,6 @@
     "Hz": {
       "type": "string"
     },
-    "KatalogLink": {
-      "type": "string"
-    },
     "DetayLink": {
       "type": "string"
     },
@@ -28,14 +25,26 @@
       "type": "blocks"
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
+      ]
+    },
+    "katalog": {
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

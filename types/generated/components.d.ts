@@ -212,7 +212,7 @@ export interface GeneratorTabsTableRows extends Struct.ComponentSchema {
     DetayLink: Schema.Attribute.String;
     Hz: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    KatalogLink: Schema.Attribute.String;
+    katalog: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Model: Schema.Attribute.String;
     YedekGuc: Schema.Attribute.String;
   };
