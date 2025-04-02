@@ -118,14 +118,15 @@ export interface BrandsBrands extends Struct.ComponentSchema {
 export interface CatalogCatalog extends Struct.ComponentSchema {
   collectionName: 'components_catalog_catalogs';
   info: {
+    description: '';
     displayName: 'Catalog';
   };
   attributes: {
+    Catalog: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    Link: Schema.Attribute.String;
     Title: Schema.Attribute.String;
   };
 }
