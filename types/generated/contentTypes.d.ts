@@ -696,6 +696,15 @@ export interface ApiGeneratorPageGeneratorPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    DieselGeneratorsMedium: Schema.Attribute.Component<
+      'generator-tabs.generator-tabs',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     GasGenerators: Schema.Attribute.Component<
       'generator-tabs.generator-tabs',
       true
@@ -1070,14 +1079,13 @@ export interface ApiOuterFuelTankOuterFuelTank extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiSeismicVibrationPageSeismicVibrationPage
-  extends Struct.SingleTypeSchema {
-  collectionName: 'seismic_vibration_pages';
+export interface ApiProductsPageProductsPage extends Struct.SingleTypeSchema {
+  collectionName: 'products_pages';
   info: {
     description: '';
-    displayName: 'SeismicVibrationPage';
-    pluralName: 'seismic-vibration-pages';
-    singularName: 'seismic-vibration-page';
+    displayName: 'ProductsPage';
+    pluralName: 'products-pages';
+    singularName: 'products-page';
   };
   options: {
     draftAndPublish: true;
@@ -1088,15 +1096,54 @@ export interface ApiSeismicVibrationPageSeismicVibrationPage
     };
   };
   attributes: {
-    BrandLogos: Schema.Attribute.Component<
-      'seismic-vibration-page.seismic-vibration-page',
-      true
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::products-page.products-page'
+    >;
+    ProductItems: Schema.Attribute.Component<'product.product-item', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ProductsCounter: Schema.Attribute.Component<
+      'counter-section.counter-section',
+      false
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSeismicVibrationPageSeismicVibrationPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'seismic_vibration_pages';
+  info: {
+    description: '';
+    displayName: 'SeismicVibrationPage';
+    pluralName: 'seismic-vibration-pages';
+    singularName: 'seismic-vibration-page';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
     Content: Schema.Attribute.Blocks &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1118,6 +1165,12 @@ export interface ApiSeismicVibrationPageSeismicVibrationPage
           localized: true;
         };
       }>;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     LeftSection: Schema.Attribute.Blocks &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1129,19 +1182,9 @@ export interface ApiSeismicVibrationPageSeismicVibrationPage
       'oneToMany',
       'api::seismic-vibration-page.seismic-vibration-page'
     >;
-    MainImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     publishedAt: Schema.Attribute.DateTime;
-    RightImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
+    secondImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1752,6 +1795,7 @@ declare module '@strapi/strapi' {
       'api::low-voltage-page.low-voltage-page': ApiLowVoltagePageLowVoltagePage;
       'api::medium-voltage-page.medium-voltage-page': ApiMediumVoltagePageMediumVoltagePage;
       'api::outer-fuel-tank.outer-fuel-tank': ApiOuterFuelTankOuterFuelTank;
+      'api::products-page.products-page': ApiProductsPageProductsPage;
       'api::seismic-vibration-page.seismic-vibration-page': ApiSeismicVibrationPageSeismicVibrationPage;
       'api::sound-proof-container.sound-proof-container': ApiSoundProofContainerSoundProofContainer;
       'plugin::content-releases.release': PluginContentReleasesRelease;

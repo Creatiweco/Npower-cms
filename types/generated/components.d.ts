@@ -118,14 +118,15 @@ export interface BrandsBrands extends Struct.ComponentSchema {
 export interface CatalogCatalog extends Struct.ComponentSchema {
   collectionName: 'components_catalog_catalogs';
   info: {
+    description: '';
     displayName: 'Catalog';
   };
   attributes: {
+    Catalog: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    Link: Schema.Attribute.String;
     Title: Schema.Attribute.String;
   };
 }
@@ -212,7 +213,6 @@ export interface GeneratorTabsTableRows extends Struct.ComponentSchema {
     Content: Schema.Attribute.Blocks;
     DetayLink: Schema.Attribute.String;
     Hz: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     katalog: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Model: Schema.Attribute.String;
     YedekGuc: Schema.Attribute.String;
@@ -267,6 +267,18 @@ export interface PanelItemsPanelItems extends Struct.ComponentSchema {
     displayName: 'PanelItems';
   };
   attributes: {
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface ProductProductItem extends Struct.ComponentSchema {
+  collectionName: 'components_product_product_items';
+  info: {
+    displayName: 'ProductItem';
+  };
+  attributes: {
+    Content: Schema.Attribute.Blocks;
+    Icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Title: Schema.Attribute.String;
   };
 }
@@ -423,6 +435,7 @@ declare module '@strapi/strapi' {
       'hero-section.items': HeroSectionItems;
       'outer-fuel-tank.outer-fuel-tank': OuterFuelTankOuterFuelTank;
       'panel-items.panel-items': PanelItemsPanelItems;
+      'product.product-item': ProductProductItem;
       'seismic-vibration-page.seismic-vibration-page': SeismicVibrationPageSeismicVibrationPage;
       'services-section.services-section': ServicesSectionServicesSection;
       'sound-proof-generator.generator-data': SoundProofGeneratorGeneratorData;

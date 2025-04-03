@@ -46,6 +46,16 @@
           "localized": true
         }
       }
+    },
+    "DieselGeneratorsMedium": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "generator-tabs.generator-tabs"
     }
   }
 }
